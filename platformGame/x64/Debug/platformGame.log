@@ -1,0 +1,12 @@
+﻿  main.cpp
+C:\Users\viole\Desktop\platformGame\platformGame\main.cpp(33,46): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\viole\Desktop\platformGame\platformGame\main.cpp(110,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\viole\Desktop\platformGame\platformGame\main.cpp(110,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\viole\Desktop\platformGame\platformGame\main.cpp(117,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\viole\Desktop\platformGame\platformGame\main.cpp(117,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\viole\Desktop\platformGame\platformGame\main.cpp(123,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\viole\Desktop\platformGame\platformGame\main.cpp(123,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\viole\Desktop\platformGame\platformGame\main.cpp(170,1): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\viole\Desktop\platformGame\platformGame\main.cpp(178,1): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\viole\Desktop\platformGame\platformGame\main.cpp(185,1): warning C4305: '=': truncation from 'double' to 'float'
+sfml-graphics-d.lib(sfml-graphics-d-2.dll) : fatal error LNK1112: module machine type 'x86' conflicts with target machine type 'x64'
