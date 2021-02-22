@@ -45,13 +45,11 @@ public:
 		this->curAnimation = curAnimation;
 		frameCounter = 0;
 		curFrameOffset = curAnimation.startOffset;
-
 	}
 	void nextFrame()
 	{
 		if (frameCounter > curAnimation.speed)
 		{
-
 			frameCounter = 0;
 			if (curFrameOffset >= curAnimation.startOffset + curAnimation.numframes - 1)
 			{
