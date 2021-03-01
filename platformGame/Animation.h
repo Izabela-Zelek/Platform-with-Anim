@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+
 class Animation {
 public:
 	int numframes;
@@ -21,13 +22,11 @@ public:
 
 	void Init(int _pixelWidth, int _pixelHeight, int _numRows, int _numCols)
 	{
-
 		numCols = _numCols;
 		numRows = _numRows;
 		frameSize.x = _pixelWidth / numCols;
 		frameSize.y = _pixelHeight / numRows;
 		curFrameOffset = 0;
-
 	}
 	sf::IntRect GetFrame()
 	{

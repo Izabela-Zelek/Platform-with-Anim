@@ -71,8 +71,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\SFML-2.5.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\SFML-2.5.1\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\SFML-2.5.1\include;$(IncludePath);$(WindowsSDK_IncludePath);$(VC_IncludePath)</IncludePath>
+    <LibraryPath>C:\SFML-2.5.1\lib;$(LibraryPath);$(WindowsSDK_LibraryPath_x86);$(VC_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -150,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
+    <ClInclude Include="Coin.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>

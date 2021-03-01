@@ -1,28 +1,29 @@
 ﻿  Game.cpp
-C:\Users\steph\Desktop\One Button Platform\Platform-with-Anim\platformGame\Player.h(31,84): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+C:\Users\Rooga\OneDrive\Desktop\Platform-with-Anim\platformGame\Player.h(31,84): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\steph\Desktop\One Button Platform\Platform-with-Anim\platformGame\Player.h(31,47): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+C:\Users\Rooga\OneDrive\Desktop\Platform-with-Anim\platformGame\Player.h(31,47): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\steph\Desktop\One Button Platform\Platform-with-Anim\platformGame\Game.h(24,32): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Rooga\OneDrive\Desktop\Platform-with-Anim\platformGame\Coin.h(52,55): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Rooga\OneDrive\Desktop\Platform-with-Anim\platformGame\Game.h(26,32): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\steph\Desktop\One Button Platform\Platform-with-Anim\platformGame\Game.h(124,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\steph\Desktop\One Button Platform\Platform-with-Anim\platformGame\Game.h(124,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\steph\Desktop\One Button Platform\Platform-with-Anim\platformGame\Game.h(130,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\steph\Desktop\One Button Platform\Platform-with-Anim\platformGame\Game.h(130,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\steph\Desktop\One Button Platform\Platform-with-Anim\platformGame\Game.h(136,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\steph\Desktop\One Button Platform\Platform-with-Anim\platformGame\Game.h(136,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\steph\Desktop\One Button Platform\Platform-with-Anim\platformGame\Game.h(142,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\steph\Desktop\One Button Platform\Platform-with-Anim\platformGame\Game.h(142,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\steph\Desktop\One Button Platform\Platform-with-Anim\platformGame\Game.h(148,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\steph\Desktop\One Button Platform\Platform-with-Anim\platformGame\Game.h(148,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\steph\Desktop\One Button Platform\Platform-with-Anim\platformGame\Game.h(188,1): warning C4305: 'argument': truncation from 'double' to 'float'
-  platformGame.vcxproj -> C:\Users\steph\Desktop\One Button Platform\Platform-with-Anim\Debug\platformGame.exe
+C:\Users\Rooga\OneDrive\Desktop\Platform-with-Anim\platformGame\Game.h(139,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Rooga\OneDrive\Desktop\Platform-with-Anim\platformGame\Game.h(139,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Rooga\OneDrive\Desktop\Platform-with-Anim\platformGame\Game.h(145,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Rooga\OneDrive\Desktop\Platform-with-Anim\platformGame\Game.h(145,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Rooga\OneDrive\Desktop\Platform-with-Anim\platformGame\Game.h(151,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Rooga\OneDrive\Desktop\Platform-with-Anim\platformGame\Game.h(151,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Rooga\OneDrive\Desktop\Platform-with-Anim\platformGame\Game.h(157,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Rooga\OneDrive\Desktop\Platform-with-Anim\platformGame\Game.h(157,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Rooga\OneDrive\Desktop\Platform-with-Anim\platformGame\Game.h(163,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Rooga\OneDrive\Desktop\Platform-with-Anim\platformGame\Game.h(163,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Rooga\OneDrive\Desktop\Platform-with-Anim\platformGame\Game.h(121,50): warning C4390: ';': empty controlled statement found; is this the intent?
+  platformGame.vcxproj -> C:\Users\Rooga\OneDrive\Desktop\Platform-with-Anim\Debug\platformGame.exe
