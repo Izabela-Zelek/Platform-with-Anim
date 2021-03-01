@@ -62,7 +62,7 @@ public:
 
 			}
 			else {
-				std::cout << curFrameOffset << std::endl;
+				//std::cout << curFrameOffset << std::endl;
 				curFrameOffset++;
 			}
 		}

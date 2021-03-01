@@ -24,7 +24,7 @@ public:
 
 		animations[int(PlayerAnimationState::walk)] = { 8, 36,10,true };
 		animations[int(PlayerAnimationState::run)] = { 3,25,10,true };
-		animations[int(PlayerAnimationState::jump)] = { 4,0,40,false };
+		animations[int(PlayerAnimationState::jump)] = { 4,0,15,false };
 		animations[int(PlayerAnimationState::idle)] = { 3,21,80,true };
 		animationState = PlayerAnimationState::walk;
 

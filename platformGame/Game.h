@@ -147,6 +147,8 @@ public:
 		Score.setString("Score : ");
 		Score.setPosition(sf::Vector2f(20.0f, 20.0f));
 
+		scoreValue = 0;
+
 		for (int row = 0; row < numRows; row++)
 		{
 			for (int col = 0; col < numCols; col++)

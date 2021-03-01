@@ -1,1 +1,31 @@
-﻿  platformGame.vcxproj -> C:\Users\viole\Desktop\htr\Platform-with-Anim\Debug\platformGame.exe
+﻿  Game.cpp
+C:\Users\steph\Desktop\pogle\Platform-with-Anim\platformGame\Player.h(31,84): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\steph\Desktop\pogle\Platform-with-Anim\platformGame\Player.h(31,47): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\steph\Desktop\pogle\Platform-with-Anim\platformGame\Coin.h(55,55): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\steph\Desktop\pogle\Platform-with-Anim\platformGame\Game.h(28,32): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\steph\Desktop\pogle\Platform-with-Anim\platformGame\Game.h(146,1): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\steph\Desktop\pogle\Platform-with-Anim\platformGame\Game.h(160,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\steph\Desktop\pogle\Platform-with-Anim\platformGame\Game.h(160,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\steph\Desktop\pogle\Platform-with-Anim\platformGame\Game.h(166,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\steph\Desktop\pogle\Platform-with-Anim\platformGame\Game.h(166,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\steph\Desktop\pogle\Platform-with-Anim\platformGame\Game.h(172,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\steph\Desktop\pogle\Platform-with-Anim\platformGame\Game.h(172,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\steph\Desktop\pogle\Platform-with-Anim\platformGame\Game.h(178,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\steph\Desktop\pogle\Platform-with-Anim\platformGame\Game.h(178,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\steph\Desktop\pogle\Platform-with-Anim\platformGame\Game.h(184,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\steph\Desktop\pogle\Platform-with-Anim\platformGame\Game.h(184,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\steph\Desktop\pogle\Platform-with-Anim\platformGame\Game.h(128,50): warning C4390: ';': empty controlled statement found; is this the intent?
+C:\Users\steph\Desktop\pogle\Platform-with-Anim\platformGame\Game.h(215,1): warning C4305: 'argument': truncation from 'double' to 'float'
+  platformGame.vcxproj -> C:\Users\steph\Desktop\pogle\Platform-with-Anim\Debug\platformGame.exe
