@@ -14,6 +14,7 @@ public:
 	AnimationSheet animationSheet;
 	sf::Vector2f position;
 	sf::Sprite& spriteSheet;
+	bool alive;
 
 	Coin(sf::Sprite& spheet) : spriteSheet(spheet)
 	{
@@ -25,7 +26,9 @@ public:
 		animations[int(CoinAnimationState::rotate)] = { 5, 0,20, true };
 		animationState = CoinAnimationState::rotate;
 
-		animationSheet.Init(80 , 16, 1 , 5);
+		animationSheet.Init(80, 16, 1, 5);
+
+		alive = true;
 	}
 	void startAnimaton(CoinAnimationState _animationState)
 	{

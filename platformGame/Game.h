@@ -2,12 +2,14 @@
 // Author :Noel O' Hara
 // Extra Code: Izabela Zelek 
 // Robot Animation: Stephen Hurley
+// Coins Animations: Rauls Bergs
 //Link: https://instituteoftechnol663-my.sharepoint.com/:v:/g/personal/c00247865_itcarlow_ie/ETTFY8tC4AhBvVlpaJAAtgEBsAP_AF4om9dFaxYXrbspDg?e=wI9KHc
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "Animation.h"
 #include "Player.h"
 #include "Coin.h"
+#include <string>
 
 class Game
 {
@@ -25,17 +27,22 @@ public:
 	sf::Vector2f gravity{ 0,12 };
 	sf::Vector2f jumpPushOff{ 0,6 * pixelsPerMeter };
 
+	bool gameOver = false;
+
 	Player player;
 	sf::Texture playerTextureSheet;
 	sf::Sprite playerSpriteSheet;
 
-	
+
 	Coin m_coin;
 	sf::Texture m_coinTexture;
 	sf::Sprite m_coinSprite;
-	sf::Vector2i m_coinPositions[10];
+	sf::Vector2i m_coinPositions[6];
 	int coinIndex = 0;
 
+	sf::Text Score;
+	int scoreValue = 0;
+	sf::Font arial;
 
 	bool textureInit = false;
 
@@ -104,7 +111,7 @@ public:
 	void init()
 	{
 		view = window.getDefaultView();
-		
+
 
 		if (textureInit == false)
 		{
@@ -125,8 +132,20 @@ public:
 			m_coin.InitAnimationData();
 		}
 
+		if (!arial.loadFromFile("arial.ttf"))
+		{
+		}
+
 		player.startAnimaton(Player::PlayerAnimationState::walk);
 		m_coin.startAnimaton(Coin::CoinAnimationState::rotate);
+
+		Score.setFont(arial);
+		Score.setFillColor(sf::Color::White);
+		Score.setOutlineColor(sf::Color::Yellow);
+		Score.setCharacterSize(16U);
+		Score.setLetterSpacing(1.6);
+		Score.setString("Score : ");
+		Score.setPosition(sf::Vector2f(20.0f, 20.0f));
 
 		for (int row = 0; row < numRows; row++)
 		{
@@ -165,7 +184,7 @@ public:
 				}
 				if (levelData[row][col] == 5)
 				{
-					m_coinPositions[coinIndex] = {(row * 70 ) + 10, (col * 30 ) - 20};
+					m_coinPositions[coinIndex] = { (row * 70) + 10, (col * 30) - 20 };
 					coinIndex++;
 
 					if (coinIndex > 5)
@@ -186,11 +205,19 @@ public:
 
 		sf::Clock clock;
 
+		int coinsAliveCounter = 0;
+
+		Score.setFillColor(sf::Color::White);
+		Score.setOutlineColor(sf::Color::Yellow);
+		Score.setCharacterSize(16U);
+		Score.setLetterSpacing(1.6);
+		Score.setString("Score : ");
+		Score.setPosition(sf::Vector2f(20.0f, 20.0f));
+
 		clock.restart();
 
 		while (window.isOpen())
 		{
-
 			sf::Event event;
 			while (window.pollEvent(event))
 			{
@@ -198,12 +225,11 @@ public:
 					window.close();
 			}
 
-
 			timeSinceLastUpdate += clock.restart();
-
 
 			if (timeSinceLastUpdate > timePerFrame)
 			{
+
 				timeChange = (float)timeSinceLastUpdate.asSeconds();
 				for (int row = 0; row < numRows; row++)
 				{
@@ -215,13 +241,13 @@ public:
 							m_coinPositions[coinIndex] = { m_coinPositions[coinIndex].x - 3,
 														   m_coinPositions[coinIndex].y };
 							coinIndex++;
-							if (coinIndex > 5 )
+							if (coinIndex > 5)
 							{
 								coinIndex = 0;
 							}
 						}
 					}
-					
+
 				}
 
 				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && velocity.y == 0)
@@ -265,14 +291,12 @@ public:
 										playerSpriteSheet.move(0, -playerSpriteSheet.getGlobalBounds().height);
 										break;
 									}
-									else {
+									else
+									{
 										init();
 									}
 								}
-
-
 							}
-
 						}
 						if (velocity.y < 0)
 						{
@@ -310,9 +334,11 @@ public:
 						}
 						if (levelData[row][col] == 5)
 						{
-							if (playerSpriteSheet.getGlobalBounds().intersects(level[row][col].getGlobalBounds()))
+							if (playerSpriteSheet.getGlobalBounds().contains(sf::Vector2f{ m_coinPositions[coinsAliveCounter] }))
 							{
-								//window.close();
+								scoreValue++;
+								m_coinPositions[coinsAliveCounter] = { 9000 , 9000 };
+								coinsAliveCounter++;
 							}
 						}
 					}
@@ -323,30 +349,44 @@ public:
 					init();
 				}
 
-				player.Update();
-
-				m_coin.Update();
-
-				window.clear();
-
-				for (int row = 0; row < numRows; row++)
+				if (gameOver == false)
 				{
-					for (int col = 0; col < numCols; col++)
+					player.Update();
+
+					m_coin.Update();
+
+					window.clear();
+
+					for (int row = 0; row < numRows; row++)
 					{
-						window.draw(level[row][col]);
+						for (int col = 0; col < numCols; col++)
+						{
+							window.draw(level[row][col]);
+						}
 					}
+
+					for (int i = 0; i < 6; i++)
+					{
+						m_coinSprite.setPosition(sf::Vector2f{ m_coinPositions[i] });
+						m_coin.Draw(window);
+					}
+
+					player.Draw(window);
+					if (scoreValue < 6)
+					{
+						Score.setString("Score:  " + std::to_string(scoreValue));
+					}
+					else if (scoreValue == 6) {
+
+						Score.setString("You collected all the coins!!!");
+					}
+
+					window.draw(Score);
+
+					window.display();
+
+					timeSinceLastUpdate = sf::Time::Zero;
 				}
-
-				for (int i = 0; i < 6; i++)
-				{
-					m_coinSprite.setPosition(sf::Vector2f{ m_coinPositions[i] });
-					m_coin.Draw(window);
-				}
-				player.Draw(window);
-
-				window.display();
-
-				timeSinceLastUpdate = sf::Time::Zero;
 			}
 		}
 	}
